@@ -32,20 +32,22 @@ function formatDuration(sec) {
 	console.log(min);
 	console.log(sec);
 
-	if (min === 0 && sec > 1) {
-		return sec === 1 ? `${sec} second` : `${sec} seconds`;
-	} else {
-		const minuteString =
-			min !== 0 ? (min === 1 ? `${min} minute` : `${min} minutes`) : null;
-		const secondString =
-			sec !== 0 ? (sec === 1 ? `${sec} second` : `${sec} seconds`) : null;
+	// if (min === 0 && sec > 1) {
+	// 	return sec === 1 ? `${sec} second` : `${sec} seconds`;
+	// } else {
+	// 	const minuteString =
+	// 		min !== 0 ? (min === 1 ? `${min} minute` : `${min} minutes`) : null;
+	// 	const secondString =
+	// 		sec !== 0 ? (sec === 1 ? `${sec} second` : `${sec} seconds`) : null;
 
-		if (minuteString && secondString) {
-			return `${minuteString} and ${secondString}`;
-		} else {
-			return minuteString || secondString;
-		}
-	}
+	// 	if (minuteString && secondString) {
+	// 		return `${minuteString} and ${secondString}`;
+	// 	} else {
+	// 		return minuteString || secondString;
+	// 	}
+	// }
+
+	return hour == 1 ? `${hour} hour` : `${hour} hours`;
 }
 
-console.log(formatDuration(8300));
+console.log(formatDuration(7200));
